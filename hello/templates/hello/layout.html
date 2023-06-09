@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+
+    
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'hello/home.css' %}"/>
+
+   
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                <!-- <div class="hamburger" id="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+                -->
+                    <a href="{% url 'home' %}" class="navbar-brand">Home</a>
+                    <a href="{% url 'about' %}" class="navbar-item">About</a>
+                    <a href="{% url 'contact' %}" class="navbar-item">Contact</a>
+                    <a href="{% url 'log' %}" class="navbar-item">Log Message</a>
+           
+            </div>
+        </div>
+    </div>
+
+    <div class="body-content">
+        {% block content %}
+        {% endblock %}
+        <hr/>
+        <div class="reference">
+            <footer>
+                <p>&copy; Lead Solutions Inc. 2023</p>
+            </footer>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="section">
+            <div class="sidebar">
+                <!-- <div class="profile">
+                    <h3 style="color: red;">Hernanie D Galigao Jr.</h3>
+                    <p>Designer/Programmer</p>
+                </div> -->
+                <ul>
+                    <li>
+                        <div class="dropdown">
+                        <a href="#" class="active" onclick="toggleDropdown(event)">
+                                <span class="icon"><i class="fas fa-home"></i></span>
+                                <span class="item">Home</span>
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="#">
+                                    <span class="icon"><i class="fas fa-address-card"></i></span>
+                                    <span class="label">Dropdown</span>
+                                </a>
+                                <!-- Dropdown content here -->
+                            </div>
+                            <div class="dropdown-content">
+                                <a href="#">
+                                <span class="icon"><i class="fas fa-address-card"></i></span>
+                                <span class="label">Dropdown</span>
+                                </a>
+                                <!-- Dropdown content here -->
+                            </div>
+                            <div class="dropdown-content">
+                                <a href="#">
+                                <span class="icon"><i class="fas fa-address-card"></i></span>
+                                <span class="label">Dropdown</span>
+                                </a>
+                                <!-- Dropdown content here -->
+                            </div>
+                        </div>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#">
+                                <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                                <span class="item">Perfomance</span>
+                            </a>
+
+                            <div class="dropdown-content">
+                                <a href="#">
+                                    <span class="icon"><i class="fas fa-file"></i></span>
+                                    <span class="label">Dropdown</span>
+                                </a>
+                                <!-- Dropdown content here -->
+                            </div>
+                            <div class="dropdown-content">
+                                <a href="#">
+                                <span class="icon"><i class="fas fa-file"></i></span>
+                                <span class="label">Dropdown</span>
+                                </a>
+                                <!-- Dropdown content here -->
+                            </div>
+                            <div class="dropdown-content">
+                                <a href="#">
+                                 <span class="icon"><i class="fas fa-file"></i></span>
+                                <span class="label">Dropdown</span>
+                                </a>
+                                <!-- Dropdown content here -->
+                            </div>
+                        </div>
+                        
+                    </li>
+                    <li>
+                        <div class="dropdown">
+
+             
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-database"></i></span>
+                            <span class="item">Development</span>
+                        </a>
+
+                        <div class="dropdown-content">
+                            <a href="#">
+                                <span class="icon"><i class="fas fa-file-archive"></i></span>
+                                <span class="label">Dropdown</span>
+                            </a>
+                            <!-- Dropdown content here -->
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="#">
+                                <span class="icon"><i class="fas fa-file-archive"></i></span>
+                            <span class="label">Dropdown</span>
+                            </a>
+                            <!-- Dropdown content here -->
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="#">
+                                <span class="icon"><i class="fas fa-file-archive"></i></span>
+                            <span class="label">Dropdown</span>
+                            </a>
+                            <!-- Dropdown content here -->
+                        </div>
+                    </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-chart-line"></i></span>
+                            <span class="item">Reports</span>
+                        </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-user-shield"></i></span>
+                            <span class="item">Admin</span>
+                        </a></div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-cog"></i></span>
+                            <span class="item">Settings</span>
+                        </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'hello/site.js' %}"></script>
+</body>
+</html>
+
+</html>
